@@ -16,7 +16,7 @@ char *get_next_word(char *str, char *delims);
 
 char **strtow(char *str, char *delims)
 {
-	char **words;
+	char **words = NULL;
 	int wc, wordLen, n, i = 0;
 
 	if (str == NULL || !*str)
