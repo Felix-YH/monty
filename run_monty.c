@@ -1,3 +1,9 @@
+/*
+ * File: run_monty.c
+ * Auth: Bennett Dixon
+ *       Brennan D Baraban
+ */
+
 #include "monty.h"
 #include <string.h>
 
@@ -16,12 +22,9 @@ void free_tokens(void)
 	if (op_toks == NULL)
 		return;
 
-	while (op_toks[i])
-	{
-		if (op_toks[i])
-			free(op_toks[i]);
-		i++;
-	}
+	for (i = 0; op_toks[i]; i++)
+		free(op_toks[i]);
+
 	free(op_toks);
 }
 
